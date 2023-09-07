@@ -1,15 +1,18 @@
+
 .carousel{
     position: relative;
 }
 .carousel__item{
-    height: 500px; 
-    width:600px;
+   
     padding: 1em; 
     display: none;
 }
 
 .carousel__item--selected{
     display:block;
+    margin:auto;
+    padding-bottom: 55px;
+    margin-top: 60px;
 }
 .carousel_nav{
     width: 100%;
