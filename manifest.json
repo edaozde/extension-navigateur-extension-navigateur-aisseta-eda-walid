@@ -1,15 +1,15 @@
 {
     "manifest_version": 3,
-    "name": "Prend une pause",
+    "name": "Take A Strech",
     "version": "1.0",
-    "description": "Etirement au bureau",
+    "description": "Prenez une pause au bureau avec nos exercices de posture !",
     "icons": {
-      "1": "icon.png"
+      "1": "icone.png"
    
     },
     "action": {
-      "default_icon": "icon.png",
-      "default_title": "BREAK TIME",
+      "default_icon": "icone.png",
+      "default_title": "Take A Stretch",
       "default_popup": "popup.html"
     },
     "permissions": ["storage", "alarms", "notifications"],
