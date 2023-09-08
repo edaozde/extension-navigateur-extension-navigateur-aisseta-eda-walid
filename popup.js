@@ -2,15 +2,16 @@
 
 function updateTime() {
   //on récupère les 3 valeurs dans le storage local de chrome
-  chrome.storage.local.get(["timer", "timeOption", "isRunning"], (res) => {
+  chrome.storage.local.get(["timer", "timeStarter", "isRunning"], (res) => {
     const time = document.getElementById("time"); //pour afficher en html
 
     //la variable minute et calcul des minutes restantes
-    const minutes = String(res.timeOption - Math.ceil(res.timer / 60)).padStart(
-      2,
-      "0"
-    );
-    //res.timeOption: C'est la valeur de l'option de temps provenant d'un objet stocké dans le stockage local de Chrome.res.timer: C'est la valeur du minuteur, également obtenue à partir de l'objet stocké dans le stockage local de Chrome.
+    //si timeStarter = 25 et timer = 1 pour que le timer passe à 24
+    const minutes = String(
+      res.timeStarter - Math.ceil(res.timer / 60)
+    ).padStart(2, "0");
+
+    //res.timeStarter: C'est la valeur de l'option de temps provenant d'un objet stocké dans le stockage local de Chrome.res.timer: C'est la valeur du minuteur, également obtenue à partir de l'objet stocké dans le stockage local de Chrome.
     let seconds = "00";
     if (res.timer % 60 != 0) {
       seconds = `${60 - (res.timer % 60)}`.padStart(2, "0");
@@ -24,7 +25,8 @@ updateTime();
 setInterval(updateTime, 1000);
 
 const startTimerBtn = document.getElementById("start-timer-btn"); //on stock dans la variable
-startTimerBtn.addEventListener("click", () => { //on detecte le click de l'utilisateur
+startTimerBtn.addEventListener("click", () => {
+  //on detecte le click de l'utilisateur
   chrome.storage.local.get(["isRunning"], (res) => {
     chrome.storage.local.set(
       {
