@@ -33,9 +33,14 @@ startTimerBtn.addEventListener("click", () => {
         isRunning: !res.isRunning,
       },
       () => {
-        startTimerBtn.textContent = !res.isRunning
+        /*startTimerBtn.textContent = !res.isRunning
           ? "Pause Timer"
-          : "Start Timer";
+          : "Start Timer";*/
+        if (res.isRunning) {
+          startTimerBtn.textContent = "Start Timer";
+        } else {
+          startTimerBtn.textContent = "Pause Timer";
+        }
       }
     );
   });
