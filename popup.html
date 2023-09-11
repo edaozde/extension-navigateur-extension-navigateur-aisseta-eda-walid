@@ -11,20 +11,35 @@
 <body>
     <div class="header">
         <img src="../icone.png">
-    </div>
-    <h1 id="time">00:00</h1>
-    <button id="start-timer-btn">Start</button>
-    <button id="reset-timer-btn">Reset</button>
-    
-    <div class="choose">
-        <input type="number" id="min-choose">
-        <button id="my-btn" type="button">Entrer</button>
+        <h1 id="title">Take A Stretch</h1>
     </div>
 
-    <button id="fifteen-min">15:00</button>
-    <button id="thirty-min">30:00</button>
-    <button id="fortyfive-min">45:00</button>
-    <button id="sixty-min">60:00</button>
+    <div class="text">
+        <p>Optimisez vos performances, prenez une pause active !</p>
+    </div>
+
+    <div class="chrono-buttons">
+        <button id="start-timer-btn">Start</button>
+            <p id="time">00:00</p>
+        <button id="reset-timer-btn">Reset</button>
+    </div>
+    <br></br>
+
+    <div class="break">
+        <div class="choose">
+            <input type="number" id="min-choose" placeholder="Choisis ton temps">
+            <button id="my-btn" type="button">Entrer</button>
+        </div>
+
+        <div class="times">
+            <button id="fifteen-min">15:00</button>
+            <button id="thirty-min">30:00</button>
+            <button id="fortyfive-min">45:00</button>
+            <button id="sixty-min">60:00</button>
+        </div>
+    </div>
+
+    
 
     <script src="popup.js"></script>
 
