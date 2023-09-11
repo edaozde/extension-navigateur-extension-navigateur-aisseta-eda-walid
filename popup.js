@@ -59,20 +59,49 @@ resetTimerBtn.addEventListener("click", () => {
   );
 });
 
-const fiveMin = document.getElementById("five-min");
-fiveMin.addEventListener("click", () => {
+const input = document.querySelector(".choose input");
+const button = document.querySelector(".choose button");
+
+button.addEventListener("click", () => {
   chrome.storage.local.set(
     {
-      timeStart: 5,
+      timeStarter : input.value
     }
   )
 });
 
-const tenMin = document.getElementById("ten-min");
-tenMin.addEventListener("click", () => {
+const fifteen = document.getElementById("fifteen-min");
+fifteen.addEventListener("click", () => {
   chrome.storage.local.set(
     {
-      timeStart: 10,
+      timeStarter : 15,
+    }
+  )
+});
+
+const thirty = document.getElementById("thirty-min");
+thirty.addEventListener("click", () => {
+  chrome.storage.local.set(
+    {
+      timeStarter : 30,
+    }
+  )
+});
+
+const fortyFive = document.getElementById("fortyfive-min");
+fortyFive.addEventListener("click", () => {
+  chrome.storage.local.set(
+    {
+      timeStarter : 45,
+    }
+  )
+});
+
+const sixty = document.getElementById("sixty-min");
+sixty.addEventListener("click", () => {
+  chrome.storage.local.set(
+    {
+      timeStarter : 60,
     }
   )
 });
