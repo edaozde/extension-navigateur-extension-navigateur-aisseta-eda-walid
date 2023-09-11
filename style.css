@@ -1,13 +1,4 @@
-body {
-    height: 400px;
-    width: 300px;
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    height: 40px;
-}body{
+body{
     background: url(./images/coucher-soleil-coucher-soleil-pre-soiree-beaute-naturelle.jpg);
     background-repeat: no-repeat;
     
