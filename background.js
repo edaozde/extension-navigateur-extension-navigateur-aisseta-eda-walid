@@ -2,23 +2,23 @@ chrome.alarms.create("postureTimer", {
   periodInMinutes: 1 / 60,
 });
 
-chrome.storage.local.get(["timer", "isRunning", "timeOption"], (res) => {
+chrome.storage.local.get(["timer", "isRunning", "timeStart"], (res) => {
   chrome.storage.local.set({
     timer: "timer" in res ? res.timer : 0,
-    timeOption: "timeOption" in res ? res.timeOption : 1,
+    timeStart: "timeStart" in res ? res.timeStart : 25,
     isRunning: "isRunning" in res ? res.isRunning : false,
   });
 });
 
 //res.timer= récupéré dans le stockage local
-//res.timeOption : durée définie par l'utilisateur
+//res.timeStart : durée définie par l'utilisateur
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "postureTimer") {
-    chrome.storage.local.get(["timer", "isRunning", "timeOption"], (res) => {
+    chrome.storage.local.get(["timer", "isRunning", "timeStart"], (res) => {
       if (res.isRunning) {
         let timer = res.timer + 1;
         let isRunning = true;
-        if (timer === 60 * res.timeOption) {
+        if (timer === 60 * res.timeStart) {
           timer = 0; //le timer est initilisé à 0
           isRunning = false; //le timer n'est plus en cours d'exécution
         }
