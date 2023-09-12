@@ -63,45 +63,35 @@ const input = document.querySelector(".choose input");
 const button = document.querySelector(".choose button");
 
 button.addEventListener("click", () => {
-  chrome.storage.local.set(
-    {
-      timeStarter : input.value
-    }
-  )
+  chrome.storage.local.set({
+    timeStarter: input.value,
+  });
 });
 
 const fifteen = document.getElementById("fifteen-min");
 fifteen.addEventListener("click", () => {
-  chrome.storage.local.set(
-    {
-      timeStarter : 15,
-    }
-  )
+  chrome.storage.local.set({
+    timeStarter: 15,
+  });
 });
 
 const thirty = document.getElementById("thirty-min");
 thirty.addEventListener("click", () => {
-  chrome.storage.local.set(
-    {
-      timeStarter : 30,
-    }
-  )
+  chrome.storage.local.set({
+    timeStarter: 30,
+  });
 });
 
 const fortyFive = document.getElementById("fortyfive-min");
 fortyFive.addEventListener("click", () => {
-  chrome.storage.local.set(
-    {
-      timeStarter : 45,
-    }
-  )
+  chrome.storage.local.set({
+    timeStarter: 45,
+  });
 });
 
 const sixty = document.getElementById("sixty-min");
 sixty.addEventListener("click", () => {
-  chrome.storage.local.set(
-    {
-      timeStarter : 60,
-    }
-  )
+  chrome.storage.local.set({
+    timeStarter: 60,
+  });
 });
