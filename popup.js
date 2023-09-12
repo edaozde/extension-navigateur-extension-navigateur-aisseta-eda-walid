@@ -1,5 +1,5 @@
 //fonction pour mettre à jour le minuteur
-
+const body = document.querySelector('.container')
 function updateTime() {
   //on récupère les 3 valeurs dans le storage local de chrome
   chrome.storage.local.get(["timer", "timeStarter", "isRunning"], (res) => {
@@ -105,3 +105,55 @@ sixty.addEventListener("click", () => {
     }
   )
 });
+
+
+
+// function play() {
+//   var audio = document.getElementById("audio");
+//   audio.play();
+// }
+
+const songInput = document.getElementById("input-song");
+const nextSong = document.getElementById("next-song");
+const lastSong = document.getElementById("last-song");
+const sound = [{
+  song1: 'Chill.mp3',
+  song2: 'Chill2.mp3',
+  song3: 'Chill3.mp3'
+}]
+let currentAudio = null;
+
+const audioPlay = () => {
+  if (currentAudio === null || currentAudio.paused) {
+    const randomSong = sound[0][`song${Math.floor(Math.random() * 3) + 1}`];
+    currentAudio = new Audio(randomSong);
+    currentAudio.play();
+  } else {
+    currentAudio.pause();
+  }
+}
+
+songInput.addEventListener("click", audioPlay)
+
+nextSong.addEventListener("click", () => {
+  if (currentAudio === null || currentAudio.paused) {
+    const randomSong = sound[0][`song${Math.floor(Math.random() * 3) + 1}`];
+    currentAudio = new Audio(randomSong);
+    currentAudio.play();
+  }else{
+    currentAudio.pause();
+    const randomSong = sound[0][`song${Math.floor(Math.random() * 3) + 1}`];
+    currentAudio = new Audio(randomSong);
+    currentAudio.play();
+  }
+  body.classList.add('fadeIn')
+  body.style.background = "url(/images/chill2.jpg)";
+})
+
+lastSong.addEventListener("click", () => {
+  audioElement.pause()
+  audioElement.play()
+  body.classList.add('fadeOut')
+  body.style.background = "url(/images/chill.jpg)";
+  body.style.backgroundSize = "cover";
+})

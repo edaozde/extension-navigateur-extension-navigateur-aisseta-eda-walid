@@ -5,14 +5,13 @@ body {
     height: 500px;
     width: 500px;
     font-family: 'Poppins', sans-serif;
+    background-image: url(/images/chill.jpg);
+    background-size: cover;
 }
 
 .header {
     display: flex;
     justify-content:center;
-    
-
-    
 }
 
 img {
@@ -31,46 +30,105 @@ img {
     display: flex;
     justify-content: space-evenly;
     height: 40%;
+    padding-bottom: 30px;
 }
 #time{
     display: flex;
-    background-color: blueviolet;
     border-radius: 50%;
     width: 200px;
     justify-content: center;    
     align-items: center;
     height: 100%;
     font-size: 2rem;
+    color: white;
 }
 
 #start-timer-btn, #reset-timer-btn {
     display: flex;
-    background-color: blueviolet;
     border-radius: 50%;
     width: 120px;  
     justify-content: center;
     align-items: center;
     height: 60%;
     margin-top: 72px;
+    background: none;
+    color: white;
+    transition: background-color 2s,
+    rotate 2s;
 } 
+
+#start-timer-btn:hover, #reset-timer-btn:hover{
+    background-color: none;
+    rotate: 360deg;
+}
 
 .break {
     display: flex;
-    align-items: flex-end;
 }
 
 .choose {
     display: flex;
-    
+    justify-content: space-between;
+}
+
+.choose input {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.choose input::placeholder{
+    color: white;
+}
+
+
+.choose button{
+    background: none;
+    border: none;
+    color: white;
+    border-radius: 50%;
 }
 
 .times button{
     height: 50px;
-    background-color: rgb(36, 207, 210);
+    margin-left: 15px;
+    color: white;
+    background: none;
     border-radius: 50%;
+    transition: background-color 2s,
+    rotate 2s;
 }
 
 .times button:hover{
+    background-color: none;
+    rotate: 360deg;
+}
+
+.music{
+    display: flex;
+    justify-content: space-around;
+}
+
+.music input{
+    height: 30px;
+    margin-left: 15px;
     color: white;
-    background-color: black;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 2s,
+    rotate 2s;
+}
+
+.music input:hover{
+    background-color: none;
+    rotate: 360deg;
+}
+
+.fadeIn{
+    transition: 1s ease;
+}
+
+.fadeOut{
+    transition: 1s ease;
 }
