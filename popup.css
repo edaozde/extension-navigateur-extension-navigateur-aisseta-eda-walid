@@ -1,17 +1,36 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
     height: 500px;
     width: 500px;
     font-family: 'Poppins', sans-serif;
-    background-image: url(/images/chill.jpg);
-    background-size: cover;
+    color: white;
+}
+
+.video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .header {
     display: flex;
-    justify-content:center;
+    justify-content: space-around;
+}
+
+.header img{
+    margin-left: 50px;
+}
+
+.header h1{
+    margin-right: 150px;
 }
 
 img {
@@ -129,6 +148,25 @@ img {
     transition: 1s ease;
 }
 
-.fadeOut{
-    transition: 1s ease;
+.dissapear{
+    scale: 0;
+}
+
+.nodissapear{
+    scale: 1;
+}
+
+#back-main-screen{
+    height: 45px;
+    margin-left: 15px;
+    color: white;
+    background: none;
+    border-radius: 50%;
+    transition: background-color 2s,
+    rotate 2s;
+}
+
+#back-main-screen:hover{
+    background-color: none;
+    rotate: 360deg;
 }

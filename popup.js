@@ -113,6 +113,8 @@ sixty.addEventListener("click", () => {
 //   audio.play();
 // }
 
+const video = document.querySelector(".video");
+const main = document.getElementById("back-main-screen");
 const songInput = document.getElementById("input-song");
 const nextSong = document.getElementById("next-song");
 const lastSong = document.getElementById("last-song");
@@ -146,14 +148,23 @@ nextSong.addEventListener("click", () => {
     currentAudio = new Audio(randomSong);
     currentAudio.play();
   }
-  body.classList.add('fadeIn')
-  body.style.background = "url(/images/chill2.jpg)";
+  video.classList.add('fadeIn');
+  video.classList.add('dissapear');
+  body.classList.add('fadeIn');
+  body.style.backgroundImage = "url(/images/chill2.jpg)";
 })
 
 lastSong.addEventListener("click", () => {
-  audioElement.pause()
-  audioElement.play()
-  body.classList.add('fadeOut')
+  currentAudio.pause()
+  currentAudio.play()
+  video.classList.add('fadeIn');
+  video.classList.add('dissapear');
+  body.classList.add('fadeIn');
   body.style.background = "url(/images/chill.jpg)";
   body.style.backgroundSize = "cover";
-})
+});
+
+main.addEventListener("click", () => {
+  video.classList.add('fadeIn');
+  video.classList.add('nodissapear');
+});
