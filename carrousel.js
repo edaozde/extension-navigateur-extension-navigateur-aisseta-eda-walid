@@ -1,3 +1,27 @@
+//scroll
+
+const navLinks = [...document.querySelectorAll("nav a")];
+const sections = [...document.querySelectorAll("section")];
+
+let sectionsPosition;
+
+function positionCalculation() {
+  sectionsPosition = sections.map((section) => section.offsetTop);
+}
+
+positionCalculation();
+console.log(sectionsPosition);
+
+navLinks.forEach((link) => link.addEventListener("click", addScrollSmooth));
+
+function addScrollSmooth(e) {
+  const linkIndex = navLinks.indexOf(e.target);
+  window.scrollTo({
+    top: sectionsPosition[linkIndex],
+    behavior: "smooth",
+  });
+}
+
 /*carousel*/
 document.querySelectorAll(".carousel").forEach((carousel) => {
   const items = carousel.querySelectorAll(".carousel__item");
@@ -65,14 +89,13 @@ function countdown() {
   }
 }
 */
- // swipe effect 
+// swipe effect
 
-
-
+//code petit mot
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["stretch", "break", "breath", "stop"];
+const textArray = ["une pause", "un moment", "une inspiration ", "un break"];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000; // Delay between current and next text
@@ -81,33 +104,36 @@ let charIndex = 0;
 
 function type() {
   if (charIndex < textArray[textArrayIndex].length) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    if (!cursorSpan.classList.contains("typing"))
+      cursorSpan.classList.add("typing");
     typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
     charIndex++;
     setTimeout(type, typingDelay);
-  } 
-  else {
+  } else {
     cursorSpan.classList.remove("typing");
-  	setTimeout(erase, newTextDelay);
+    setTimeout(erase, newTextDelay);
   }
 }
 
 function erase() {
-	if (charIndex > 0) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+  if (charIndex > 0) {
+    if (!cursorSpan.classList.contains("typing"))
+      cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(
+      0,
+      charIndex - 1
+    );
     charIndex--;
     setTimeout(erase, erasingDelay);
-  } 
-  else {
+  } else {
     cursorSpan.classList.remove("typing");
     textArrayIndex++;
-    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
     setTimeout(type, typingDelay + 1100);
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-  if(textArray.length) setTimeout(type, newTextDelay + 250);
+document.addEventListener("DOMContentLoaded", function () {
+  // On DOM Load initiate the effect
+  if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
-
