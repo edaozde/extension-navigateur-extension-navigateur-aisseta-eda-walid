@@ -152,6 +152,9 @@ nextSong.addEventListener("click", () => {
   video.classList.add('dissapear');
   body.classList.add('fadeIn');
   body.style.backgroundImage = "url(/images/chill2.jpg)";
+  document.body.style.color = 'white'
+  startTimerBtn.style.color = 'white'
+  resetTimerBtn.style.color = 'white'
 })
 
 lastSong.addEventListener("click", () => {
@@ -162,9 +165,15 @@ lastSong.addEventListener("click", () => {
   body.classList.add('fadeIn');
   body.style.background = "url(/images/chill.jpg)";
   body.style.backgroundSize = "cover";
+  document.body.style.color = 'white'
+  startTimerBtn.style.color = 'white'
+  resetTimerBtn.style.color = 'white'
 });
 
 main.addEventListener("click", () => {
   video.classList.add('fadeIn');
   video.classList.add('nodissapear');
+  document.body.style.color = 'black'
+  startTimerBtn.style.color = 'black'
+  resetTimerBtn.style.color = 'black'
 });
