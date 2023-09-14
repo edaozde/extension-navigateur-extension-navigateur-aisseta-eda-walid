@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
  * {
      margin: 0;
@@ -10,13 +11,15 @@
 body {
 
     font-family: 'Poppins', sans-serif;
+    
 }
  nav a {
-    margin: 0 10px;
+    margin: 0 40px;
     text-decoration: none;
     color: white;
-    font-size: 25px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
 
  }
 
@@ -42,7 +45,9 @@ nav {
  }
 
  .section h1 {
-font-size: 100px  ;
+
+    font-size: 100px;
+    color: antiquewhite;
 
  }
 
@@ -87,15 +92,11 @@ font-size: 100px  ;
  .carousel__item--selected {
      display: block;
      margin: auto;
-     height: 820px;
+     height: 700px;
      padding-bottom: 55px;
      margin-top: 60px;
      object-fit: cover;
      background-color: rgba(230,222,198,255)
-     
-    
-
-
  }
 
  .carousel_nav {
@@ -111,14 +112,14 @@ font-size: 100px  ;
      width: 20px;
      height: 20px;
      display: inline-block;
-     background: rgb(157, 104, 104);
+     background:burlywood;
      border-radius: 50%;
      margin: 0 5px;
      cursor: pointer;
  }
 
  .carousel_button--selected {
-     background: rgb(219, 161, 161);
+     background: rgb(255, 255, 255);
  }
 
 
@@ -131,8 +132,6 @@ font-size: 100px  ;
      transform: translateY(-50%);
      width: 200px;
      height: 200px;
-     
-    
      display: flex;
      align-items: center;
      justify-content: center;
@@ -146,14 +145,14 @@ font-size: 100px  ;
           
 
 #section-first{
-    background: linear-gradient(-45deg, #c3b8b2, hsla(27, 36%, 53%, 0.943), #cdbb98, #eeeb9f);
+    background: linear-gradient(-45deg, #8aac96d1, #049c375f, hsla(256, 16%, 73%, 0.943), #f0daf1);
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;
 
 }
 
 #explication {
- background-color: white;
+ background-color: rgb(235, 211, 234);
  display: flex;
  flex-direction: column;
 
@@ -169,9 +168,7 @@ font-size: 100px  ;
 #explication p{
     text-align: center;
     width: 50%;
-    font-size: 100%;
-
-    
+    font-size: 20px;   
 }
 
 #exercice{
@@ -189,7 +186,7 @@ font-size: 100px  ;
 
   #section-first h1 span.typed-text {
     font-weight: normal;
-    color: #dd7732;
+    color: #f1c2eb;
   }
   #section-first h1 span.cursor {
     display: inline-block;
