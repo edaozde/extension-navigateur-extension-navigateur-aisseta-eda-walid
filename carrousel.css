@@ -74,11 +74,8 @@ nav {
      display: flex;
      justify-content: center;
      align-items: center;
-    
+     padding-right: 300px;
      object-fit: cover;
-    
-
-
  }
 
  .carousel__item {
@@ -114,19 +111,19 @@ nav {
      display: inline-block;
      background:burlywood;
      border-radius: 50%;
-     margin: 0 5px;
-     cursor: pointer;
+     margin: -53px 10px;
+     cursor: pointer;   
  }
 
  .carousel_button--selected {
-     background: rgb(255, 255, 255);
+     background: rgb(255, 255, 255);   
  }
 
 
  /*chronomètre 10 secs*/
 
  .container {
-     
+    
      left: 50px;
      top: 50%;
      transform: translateY(-50%);
@@ -135,12 +132,10 @@ nav {
      display: flex;
      align-items: center;
      justify-content: center;
-     color: #151212;
+     color: white;
      font-size: 80px;
      font-weight: bold;
-
-     
-
+     margin-right:20px;
  }
           
 
@@ -160,13 +155,13 @@ nav {
 
 #explication h1 {
     text-align: center;
-    width: 50%;
-
-    
+    width: 50%;   
 }
+
 
 #explication p{
     text-align: center;
+    color: white;
     width: 50%;
     font-size: 20px;   
 }
@@ -181,7 +176,6 @@ nav {
     letter-spacing: 0.1rem;
     text-align: center;
     overflow: hidden;
-   
   }
 
   #section-first h1 span.typed-text {
