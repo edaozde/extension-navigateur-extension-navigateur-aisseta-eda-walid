@@ -13,3 +13,10 @@ Bienvenue dans Take a Stretch, notre projet d'extension Google Chrome développ�
 - JavaScript
 - HTML/CSS
 - Extension Google Chrome
+
+## Comment Installer l'Extension
+
+- Clonez le projet localement.
+- Allez dans chrome://extensions/.
+- Activez le mode développeur.
+- Cliquez sur "Charger l'extension non empaquetée" et sélectionnez le dossier du projet.
