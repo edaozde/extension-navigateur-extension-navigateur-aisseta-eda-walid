@@ -20,3 +20,11 @@ Bienvenue dans Take a Stretch, notre projet d'extension Google Chrome développ�
 - Allez dans chrome://extensions/.
 - Activez le mode développeur.
 - Cliquez sur "Charger l'extension non empaquetée" et sélectionnez le dossier du projet.
+
+## Comment Utiliser l'Extension
+
+- Cliquez sur l'icône de l'extension dans la barre d'outils de Chrome.
+- Choisissez la durée du compte à rebours dans la popup.
+- Attendez que le compte à rebours se termine.
+- La page d'exercices de postures s'ouvrira automatiquement avec le canvas interactif.
+
